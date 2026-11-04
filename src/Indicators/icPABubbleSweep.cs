@@ -10,7 +10,6 @@
 // Repository:   https://github.com/icPriceAction/bubble-sweep
 // YouTube:      https://youtube.com/@icPriceAction
 // Support:      https://buymeacoffee.com/icpriceaction
-// Prop Code:    ICPAT (Discounts: https://icpriceaction.com/prop-firms.html)
 //
 // License:      Free for personal trading use. Commercial resale, redistribution,
 //               or repackaging is strictly prohibited. See LICENSE in official repository.
@@ -19,7 +18,7 @@
 //               with same-side clustering zones and absorption rings. No Tick Replay required.
 //
 // Changelog:
-//   v16.2.1 (2026-11-03) - Initial public release. Cleaned and optimized by icPriceAction.
+//   v16.2.1  - Initial public release. Cleaned and optimized by icPriceAction.
 //            - Renamed to icPABubbleSweep (icPA folder); Name and Description updated.
 //            - Default colors changed to complement the icPriceAction chart palette.
 //            - Parameters ordered sequentially within feature groups (General, Visuals,
@@ -379,7 +378,7 @@ namespace NinjaTrader.NinjaScript.Indicators.icPA
                 Description         = "Shows large aggressive trades (sweeps) as bubbles sized by volume, with clustering zones and absorption rings. "
                                     + "Buy/sell side comes from the bid/ask stamped on each trade. Requires historical tick data (bid/ask-stamped for accurate sides).\r\n"
                                     + "Developed by Istvan Cebrian | https://icpriceaction.com\n"
-                                    + "Support this free tool: https://buymeacoffee.com/icpriceaction | Prop Firm Discount Code: ICPAT (https://icpriceaction.com/prop-firms.html)";
+                                    + "Support this free tool: https://buymeacoffee.com/icpriceaction";
                 Name                = "icPA - Bubble Sweep";
                 Calculate           = Calculate.OnEachTick;
                 IsOverlay           = true;

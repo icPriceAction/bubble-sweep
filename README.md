@@ -2,12 +2,11 @@
 
 [![NinjaTrader 8](https://img.shields.io/badge/Platform-NinjaTrader%208-black.svg)](https://ninjatrader.com)
 [![License: Personal Use](https://img.shields.io/badge/License-Personal%20Use-6E6E6E.svg)](#license)
+[![Support: Buy Me a Coffee](https://img.shields.io/badge/Support-Buy%20Me%20a%20Coffee-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/icpriceaction)
 [![YouTube Guide](https://img.shields.io/badge/YouTube-Watch%20Walkthrough-red.svg)](https://youtube.com/@icPriceAction)
 [![Website](https://img.shields.io/badge/Website-icpriceaction.com-111213.svg)](https://icpriceaction.com)
-[![Buy Me a Coffee](https://img.shields.io/badge/Support-Buy%20Me%20a%20Coffee-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/icpriceaction)
-[![Prop Discounts](https://img.shields.io/badge/Prop%20Discounts-Code%20ICPAT-black.svg)](https://icpriceaction.com/prop-firms.html)
 
-A specialized Indicator engineered for Price Action day trading. It finds the largest aggressive trades (sweeps) and draws them as volume-sized bubbles on their candle, with clustering zones where same-side sweeps stack up and a ring on sweeps that failed to move price.
+A specialized Indicator engineered for Price Action and Order Flow trading. It finds the largest aggressive trades (sweeps) and draws them as volume-sized bubbles on their candle, with clustering zones where same-side sweeps stack up and a ring on sweeps that failed to move price.
 
 ---
 
@@ -21,13 +20,31 @@ Watch the complete breakdown of parameters, price action context, and chart exam
 
 ---
 
+## ☕ Support the Project
+
+All tools by **icPriceAction** are **100% free and open-source for personal trading use**. There are no paywalls, subscriptions, or locked features and there never will be!
+
+Developing, optimizing for zero latency on multiple charts/instruments, and maintaining documentation and releases takes a **considerable amount of personal time and ongoing effort**. 
+
+If this tool saves you screen time, improves your execution, or cleans up your charts, buying a coffee is the best way to support continued development:
+
+<p align="left">
+  <a href="https://buymeacoffee.com/icpriceaction" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="190">
+  </a>
+</p>
+
+> **[☕ Support Development on Buy Me a Coffee](https://buymeacoffee.com/icpriceaction)**
+
+---
+
 ## ⚡ Key Features
 
 - **Sweep Bubbles:** Trades on the same side at the same timestamp are combined into one sweep. Sweeps above the threshold are drawn at their volume-weighted price, with bubble area growing with volume. The threshold is adaptive by default (the top 0.05% of recent sweep sizes), so it works on any instrument without tuning. Buy/sell side comes from the bid/ask stamped on each trade.
 - **Clustering Zones & Absorption:** Several same-side bubbles close in price and time form a zone that extends right until a bar closes through it or the session ends. A sweep that could not push price even one tick further within a few seconds gets an absorption ring.
 - **Hover Tooltips & Strategy Outputs:** Hover a bubble to see its side, volume, price levels, time, threshold multiple and absorption status. Sweep counts, volumes, zone and absorption signals are exposed as series for strategies and other indicators.
-- **PATS & Context Aligned:** Designed for Price Action principles (Mack / Thomas Wade) and disciplined futures execution.
-- **Zero Chart Lag:** Native C# execution optimized to prevent UI freezes on high-frequency 2000-tick ES/MES charts.
+- **PATS & Context Aligned:** Designed for Price Action principles and disciplined futures execution.
+- **Zero Chart Lag:** Native C# execution optimized to prevent UI freezes on high-frequency tick charts.
 - **Clean Visuals:** Complementary default palette that preserves candlestick clarity without chart clutter.
 - **Fully Customizable:** Configure colors, thresholds, bubble sizing, zones and absorption via the native NT8 settings panel.
 
@@ -47,7 +64,7 @@ Watch the complete breakdown of parameters, price action context, and chart exam
 ## 📥 Installation Guide
 
 1. Head to the **[Releases](https://github.com/icPriceAction/bubble-sweep/releases)** tab of this repository.
-2. Download the latest release `.zip` file (`icPriceAction_icPABubbleSweep_v16.2.1.zip`).
+2. Download the latest release `.zip` file.
    - *Note: Do NOT extract or unzip the file.*
 3. Open **NinjaTrader 8**.
 4. In the Control Center, navigate to:
@@ -98,7 +115,7 @@ Watch the complete breakdown of parameters, price action context, and chart exam
 
 ## 📝 Changelog
 
-- **v16.2.1** (2026-11-03) - Initial public release. Cleaned and optimized by icPriceAction.
+- **v16.2.1**              - Initial public release. Cleaned and optimized by icPriceAction.
 - **v16.2.0**              - Code audit: Adaptive Percentile default 99.95; absorption windows follow NinjaTrader's clock (Playback-safe); mouse handler and brush fixes.
 - **v16.1.0**              - Zone window in minutes; zones expire at session end; Merge Bubbles Within Bar.
 - **v16.0.0**              - Diagnostics off by default (bid/ask warning only); maximum diameter clamp; softer size gradient; setting descriptions.
@@ -117,15 +134,6 @@ Watch the complete breakdown of parameters, price action context, and chart exam
 - **v9.1.0**               - Bubbles anchored to the bar the sweep was attributed to.
 - **v9.0.0**               - Output series; real-time signal, bar attribution and flush fixes.
 - **v8.0.0**               - Workspace save fixes; cross-series safety checks.
-
----
-
-## ☕ Support the Project
-
-All tools provided by **icPriceAction** are 100% free and open-source for personal trading use. These tools, even thou supported by AI have taken considerable time to design, build, test and package. If these tools bring you value, consider supporting continued development:
-
-- **Prop Firm Traders:** Use discount code **`ICPAT`** at checkout across top futures prop evaluation firms ([View Active Discounts](https://icpriceaction.com/prop-firms.html)).
-- **Profitable Traders:** Send a one-time tip to support my continued support and time, server hosting and open-source updates via [Buy Me a Coffee](https://buymeacoffee.com/icpriceaction).
 
 ---
 
